@@ -25,9 +25,11 @@ fun ifContainsValueImproved(value: Int, numbers: List<Int>):Boolean{
     //check middle index
     val middleIndex = numbers.size/2
     if (value <= numbers[middleIndex])
+        //iterate over the first batch to middle index
         for (index in 0..middleIndex){
             if (numbers[index] == value) return true
         } else {
+            //iterate over the second batch from middle index to end of list
             for (index in middleIndex until numbers.size){
                 if (numbers[index] == value) return true
             }
